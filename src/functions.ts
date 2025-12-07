@@ -8,6 +8,7 @@
  */
 function greet(name: string): void {
   // Your code here
+  console.log(`Hello ${name}`);
 }
 
 /**
@@ -21,8 +22,8 @@ function greet(name: string): void {
  */
 function isOdd(n: number): boolean {
   // Your code here
-
-  return false; // replace false with what you see is fit
+  if (n % 2 == 0) { return false; }
+  else {return true; }
 }
 
 /**
@@ -36,8 +37,10 @@ function isOdd(n: number): boolean {
  */
 function oddsSmallerThan(n: number): number {
   // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  // Count odd numbers below n: 1, 3, 5, ..., (largest odd < n)
+  // For n=7: odds are 1, 3, 5 = 3 numbers = floor(7/2) = 3
+  // For n=15: odds are 1, 3, 5, 7, 9, 11, 13 = 7 numbers = floor(15/2) = 7
+  return Math.floor(n / 2);
 }
 
 /**
@@ -52,8 +55,8 @@ function oddsSmallerThan(n: number): number {
  */
 function squareOrDouble(n: number): number {
   // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  if (n % 2 == 0) { return n * 2; }
+  else { return n ** 2; }
 }
 
 export { greet, isOdd, oddsSmallerThan, squareOrDouble };
